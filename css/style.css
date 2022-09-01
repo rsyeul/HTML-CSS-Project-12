@@ -13,8 +13,6 @@ body {
 }
 
 .main-header {
-    /* width: 100vh; */
-    /* height: 100vh; */
     background-color: #636C79;
     padding: 50px;
     padding-top: 30px;
@@ -24,8 +22,9 @@ body {
 .navbar {
     padding-left: 50px;
     padding-bottom: 40px;
-    /* width: 100%; */
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
 }
@@ -35,10 +34,6 @@ body {
     padding: 5px 10px
 }
 
-.logo>img {
-    /* width: 150px; */
-}
-
 .list {
     flex-grow: 0.4;
 }
@@ -46,16 +41,20 @@ body {
 .nav-list {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .nav-btn>button {
     background-color: transparent;
     font-size: 15px;
-    border: 1px solid #989898;
+    border: 1px solid #bababa;
     color: white;
     padding: 10px 40px
 }
+
+
+/* header */
 
 .header-part2 {
     display: flex;
@@ -67,6 +66,7 @@ body {
 
 .header-img>img {
     border-radius: 5px;
+    /* width: 100%; */
     width: 550px;
     height: 650px;
     object-fit: cover;
@@ -93,25 +93,26 @@ body {
     width: 85%;
     font-size: 20px;
     font-weight: 400;
-    color: #494949c2
+    color: #e0e0e0cd
 }
 
 .header-email-btn {
     background-color: white;
     width: 90%;
+    position: relative;
 }
 
 .mail-input {
     height: 40px;
     margin: 10px 0px;
-    width: 60%;
+    /* width: 60%; */
     border: none;
 }
 
 .mail-input:hover .mail-input::selection {
     height: 40px;
     margin: 10px 20px;
-    width: 60%;
+    /* width: 60%; */
     border: none;
 }
 
@@ -122,6 +123,9 @@ body {
     color: white;
     padding: 15px 45px;
     cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 label {
@@ -133,8 +137,6 @@ label {
 /* Footer style*/
 
 .footer-section {
-    /* width: 100vh; */
-    /* height: 100vh; */
     background-color: #030303;
     padding: 100px;
     padding-top: 50px;
@@ -149,6 +151,7 @@ label {
 
 .footer-top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -165,14 +168,13 @@ label {
     font-size: 20px;
     color: white;
     padding: 20px;
-    /* border: 5px solid red; */
-    /* width: 40px; */
     border-radius: 100px;
     background-color: #272727
 }
 
 .link-boxes {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -207,8 +209,7 @@ label {
 
 .mid-section {
     width: 90%;
-    padding: 100px;
-    padding-top: 0px;
+    margin: 100px;
 }
 
 .mid-section-header {
@@ -222,10 +223,15 @@ label {
 
 .status-details-list {
     text-align: center;
-    margin: 50px 20px;
+    margin: 50px 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15%;
+}
+
+.status-list {
+    margin-bottom: 10px;
 }
 
 .mid-section-img>img {
@@ -237,58 +243,43 @@ label {
     object-position: top;
 }
 
-.features {
-    padding-left: 5%;
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: end;
-    row-gap: 150px;
-    column-gap: 20px;
+
+/* features */
+
+.feature-1,
+.feature-2,
+.feature-3 {
+    margin: 50px 20px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
     align-items: center;
+    gap: 20px
 }
 
-.feature-2b {
-    justify-self: start;
+.feature-1a,
+.feature-1b,
+.feature-2a,
+.feature-2b,
+.feature-3a,
+.feature-3b {
+    width: 50%;
 }
 
-.feature-left-section {
-    /* padding: 0px 150px; */
-    /* width: 50%; */
-    /* margin: 0% 20%; */
-    /* width: 500px;
-    padding: 20px 100px; */
-}
-
-
-/* 
-.feature-header {
-    width: 500px;
-    padding: 20px 100px;
-    font-size: 30px;
-} */
-
-.feature-desc {
-    /* padding: 20px 100px; */
-}
-
-.feature-right-section>img {
-    width: 500px;
+.feature-1b>img,
+.feature-2b>img,
+.feature-3b>img {
+    width: 100%;
     height: 500px;
-    /* width: 100%; */
-    /* height: 80vh; */
-    /* height: 50%; */
-    /* object-fit: contain; */
     object-fit: cover;
+}
+
+.feature-2 {
+    flex-direction: row-reverse;
 }
 
 .feature-1b>img {
     object-position: right;
-}
-
-.feature-2b {
-    grid-row: 2;
-    grid-column: 1;
 }
 
 .feature-2b>img {
@@ -296,12 +287,7 @@ label {
 }
 
 .feature-3b>img {
-    object-position: left;
-}
-
-.feature-left-section {
-    padding: 10px;
-    text-align: left;
+    object-position: center;
 }
 
 .feature-header {
@@ -329,8 +315,9 @@ label {
 
 .mid-section-end {
     padding: 10px 50px;
-    /* padding-top: 50px; */
+    padding-top: 50px;
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .team-member-cart {
@@ -367,6 +354,7 @@ label {
     margin: 100px 5%;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -396,4 +384,79 @@ label {
     color: white;
     padding: 20px 60px;
     cursor: pointer;
+}
+
+@media (max-width:1100px) {
+    .header-part2 {
+        flex-direction: column;
+    }
+    .header-part2-right {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .main-header,
+    .navbar {
+        padding: 10px;
+    }
+    .nav-list {
+        display: none;
+    }
+    .header-part2 {
+        flex-direction: column;
+    }
+    .header-img {
+        padding: 20px 20px;
+    }
+    .header-img>img {
+        width: 100%;
+        height: 80vh;
+    }
+    .header-part2-right {
+        width: 100%;
+    }
+    /* features  */
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        flex-direction: column;
+    }
+    .feature-1a,
+    .feature-1b,
+    .feature-2a,
+    .feature-2b,
+    .feature-3a,
+    .feature-3b {
+        width: 100%;
+    }
+    /* mid section */
+    .mid-section {
+        margin: 20px;
+    }
+    .mid-section-header {
+        margin: 20px;
+    }
+    .footer-section {
+        padding: 20px;
+    }
+    .footer-bottom {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .mid-section-end {
+        padding: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    .team-info {
+        flex-direction: column;
+    }
+    .team-info>div:first-child,
+    .team-info>div:last-child {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
